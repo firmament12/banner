@@ -3,8 +3,8 @@ $(function(){
 // モーダルウインドウ
 var winScrollTop;
 $('.js-modal-open').each(function(){
-  $(this).on('touchend click',function(open){
-      open.preventDefault();
+  $(this).on('click',function(open){
+      // open.preventDefault();
       winScrollTop = $(window).scrollTop();
       var target = $(this).data('target');
       var modal = document.getElementById(target);
