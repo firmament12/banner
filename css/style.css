@@ -101,15 +101,16 @@ h1 {
     position: fixed;
     right: 16px;
     bottom: 16px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 .up a {
     display: block;
     padding: calc((48px - 32px) / 2) 0;
     background: #1E90FF;
-    border-radius: 50%;
     text-align: center;
 }
-.up a:hover,.up a:active {
+.up a:active {
     background: #00b06b;
 }
 .fa-angle-double-up {
@@ -152,6 +153,9 @@ h1 {
 }
 .up {
     right: 32px;
-    bottom: 32px;
+    bottom: 41px;
+}
+.up a:hover {
+    background: #00b06b;
 }
 }
