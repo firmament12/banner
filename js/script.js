@@ -25,8 +25,7 @@ $(window).scroll(function() {
     } else {
         $('.up').fadeOut(200);
 }});
-$('a[href^="#"]').on('touchend click',function(smooth) {
-    smooth.preventDefault();
+$('a[href^="#"]').on('click',function() {
     var href= $(this).attr('href');
     var target = $(href);
     var w = $(window).width();
