@@ -3,17 +3,16 @@ $(function(){
 // モーダルウインドウ
 var winScrollTop;
 $('.js-modal-open').each(function(){
-  $(this).on('click',function(open){
-      // open.preventDefault();
+  $(this).on('click',function(){
       winScrollTop = $(window).scrollTop();
       var target = $(this).data('target');
       var modal = document.getElementById(target);
       $(modal).fadeIn();
+      $('.up').hide();
       return false;
   });
 });
-$('.js-modal-close').on('click',function(close){
-    // close.preventDefault();
+$('.js-modal-close').on('click',function(){
     $('.js-modal').fadeOut();
     $('body,html').stop().animate({scrollTop:winScrollTop}, 100);
     return false;
@@ -21,10 +20,10 @@ $('.js-modal-close').on('click',function(close){
 
 // スムーススクロールボタン
 $(window).scroll(function() {
-  if ($(this).scrollTop()>480) {
-      $('.up').fadeIn(240);
-  } else {
-      $('.up').fadeOut(200);
+    if ($(this).scrollTop()>480) {
+        $('.up').fadeIn(240);
+    } else {
+        $('.up').fadeOut(200);
 }});
 $('a[href^="#"]').on('touchend click',function(smooth) {
     smooth.preventDefault();
