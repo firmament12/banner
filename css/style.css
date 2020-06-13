@@ -110,7 +110,7 @@ h1 {
     background: #1E90FF;
     text-align: center;
 }
-.up a: {
+.up a:hover {
     background: #00b06b;
 }
 .fa-angle-double-up {
